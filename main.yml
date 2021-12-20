@@ -1,0 +1,8 @@
+---
+- name: test community general
+  hosts: all
+  tasks:
+    - name:  Check for modern numpy versions
+      community.general.python_requirements_info:
+          dependencies:
+            - numpy>1.21
