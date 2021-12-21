@@ -1,6 +1,6 @@
 ---
 - name: test community general
-  hosts: all
+  hosts: "reverseproxy"
   tasks:
     - name:  Check for modern numpy versions
       community.general.python_requirements_info:
