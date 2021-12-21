@@ -1,7 +1,11 @@
 ---
 - name: test community general
   hosts: "reverseproxy"
+  gather_facts: false
   tasks:
+    - name: sleep
+      ansible.builtin.shell: sleep 9000
+      delegate_to: 127.0.0.1
     - name:  Check for modern numpy versions
       community.general.python_requirements_info:
           dependencies:
