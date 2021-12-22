@@ -1,6 +1,6 @@
 ---
 - name: test community general
-  hosts: "localhost"
+  hosts: "reverseproxy"
   gather_facts: false
   tasks:
     #- name: sleep
